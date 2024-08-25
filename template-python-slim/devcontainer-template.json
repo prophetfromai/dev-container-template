@@ -15,7 +15,6 @@
     },
     "template": {
       "devcontainer.json": {
-        "dockerFile": "Dockerfile",
         "settings": {
           "python.languageServer": "Pylance",
           "python.formatting.provider": "autopep8",
@@ -31,18 +30,12 @@
           "ms-python.python",
           "ms-python.vscode-pylance",
           "njpwerner.autodocstring",
-          "xafke.flask-snippets",
           "oliviermk.fastapi-snippets",
           "ms-azuretools.vscode-docker",
           "esbenp.prettier-vscode",
           "dbaeumer.vscode-eslint",
-          "alexcvzz.vscode-sqlite",
           "eamodio.gitlens",
-          "humao.rest-client",
-          "littlefoxteam.vscode-python-test-adapter",
-          "christian-kohler.path-intellisense",
-          "ritwickdey.LiveServer",
-          "KevinRose.vsc-python-indent"
+          "christian-kohler.path-intellisense"
         ],
         "postCreateCommand": "pip install --upgrade pip && pip install flask fastapi autopep8 pylint flake8 pytest",
         "forwardPorts": [
