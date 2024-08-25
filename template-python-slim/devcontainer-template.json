@@ -1,0 +1,55 @@
+{
+    "name": "Python Flask/FastAPI Development Environment",
+    "description": "A Dev Container template for developing Python Flask and FastAPI applications.",
+    "options": {
+      "pythonVersion": {
+        "type": "string",
+        "description": "Select Python version",
+        "default": "3.11-slim",
+        "enum": [
+          "3.11-slim",
+          "3.10-slim",
+          "3.9-slim"
+        ]
+      }
+    },
+    "template": {
+      "devcontainer.json": {
+        "dockerFile": "Dockerfile",
+        "settings": {
+          "python.languageServer": "Pylance",
+          "python.formatting.provider": "autopep8",
+          "editor.formatOnSave": true,
+          "python.linting.enabled": true,
+          "python.linting.pylintEnabled": true,
+          "python.linting.flake8Enabled": true,
+          "python.testing.pytestEnabled": true,
+          "docker.languageserver.formatter.integrations": true,
+          "eslint.alwaysShowStatus": true
+        },
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "njpwerner.autodocstring",
+          "xafke.flask-snippets",
+          "oliviermk.fastapi-snippets",
+          "ms-azuretools.vscode-docker",
+          "esbenp.prettier-vscode",
+          "dbaeumer.vscode-eslint",
+          "alexcvzz.vscode-sqlite",
+          "eamodio.gitlens",
+          "humao.rest-client",
+          "littlefoxteam.vscode-python-test-adapter",
+          "christian-kohler.path-intellisense",
+          "ritwickdey.LiveServer",
+          "KevinRose.vsc-python-indent"
+        ],
+        "postCreateCommand": "pip install --upgrade pip && pip install flask fastapi autopep8 pylint flake8 pytest",
+        "forwardPorts": [
+          8000,
+          5000
+        ]
+      }
+    }
+  }
+  
